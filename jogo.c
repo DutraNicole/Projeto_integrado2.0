@@ -92,7 +92,7 @@ void Input() {  //Direção da cobrinha
     }
 }
 
-void Logic() {
+void Logic() { // direção da cobrinha 
     switch (direction) {
         case 1:
             y--;

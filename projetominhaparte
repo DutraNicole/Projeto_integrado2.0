@@ -1,0 +1,24 @@
+  //Parte da Nicole
+	  			int PlacarAtual = 0;
+	  			int PlacarAnterior = 0;
+	  			//int Record;
+	 if (PlacarAtual > PlacarAnterior)
+	 {
+		 //placar aumenta se a cobrinha pegar um coletável
+		 //mostrar o maior placar aqui
+			ST7789_WriteString(10, 199, "Pontos: ", PlacarAtual ,Font_16x26, WHITE, BLACK);
+		    //record = record;
+	 }
+	 else if (PlacarAtual == PlacarAnterior)
+	 {
+		 //placar continua o mesmo se a cobrinha pegar uma mesma quantidade de coletáveis
+		 //mostrar o placar anterior aqui
+		 ST7789_WriteString(10, 199, "Pontos: ", PlacarAtual ,Font_16x26, WHITE, BLACK);
+	 }
+	 else
+	 {
+		 //se o placar for menor que o enterior ele mostra o placar anterior assim como no outro caso
+		 //só pra indicar mesmo
+		 ST7789_WriteString(10, 199, "Pontos: ", PlacarAtual ,Font_16x26, WHITE, BLACK);
+	 }
+	  	  }

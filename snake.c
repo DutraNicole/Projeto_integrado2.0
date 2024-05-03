@@ -342,7 +342,7 @@ void refreshInfoBar(int score, int speed)
 
 //-> The highscores system seriously needs to be clean. There are some bugs, entering a name etc
 
-void createHighScores(void)
+void createHighScores(void) //placar alto 
 {
 	FILE *file; 
 	int i;
@@ -365,7 +365,7 @@ void createHighScores(void)
 	return;
 }
 
-int getLowestScore()
+int getLowestScore() //placar baixo 
 {
 	FILE *fp;
 	char str[128];
@@ -424,8 +424,9 @@ void inputScore(int score) //This seriously needs to be cleaned up
 	int entered = 0;
 	
 	clrscr(); //clear the console
-	
-	if((fp = fopen("highscores.txt", "r")) == NULL)
+
+
+	/*if((fp = fopen("highscores.txt", "r")) == NULL)
 	{
 		//Create the file, then try open it again.. if it fails this time exit.
 		createHighScores(); //This should create a highscores file (If there isn't one)
@@ -513,6 +514,7 @@ void inputScore(int score) //This seriously needs to be cleaned up
 	
 	return;
 }
+*/
 
 void displayHighScores(void) //NEED TO CHECK THIS CODE!!!
 {

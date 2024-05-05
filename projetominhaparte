@@ -1,7 +1,7 @@
   //Parte da Nicole
+
 //Atualizar placar 
 #include <stdio.h> 
-
 int main()
 {   
     while(1){
@@ -18,27 +18,49 @@ int main()
 }
 //modificar para o STM32
 
-//Atualizar recorde 
-	  			int PlacarAtual = 0;
-	  			int PlacarAnterior = 0;
-	  			//int Record;
-	 if (PlacarAtual > PlacarAnterior)
+//Atualizar recorde (atual)
+#include <stdio.h> 
+
+int main()
+{  
+    int PlacarAtual = 0;
+    int Recorde = 0;
+    while(1){
+    printf("Digite um valor para ser o placar atual: ");
+    scanf("%d", &PlacarAtual);
+   
+	 if (PlacarAtual > Recorde){
+	    Recorde = PlacarAtual;
+		printf("Recorde: %d\n", Recorde); 
+	 } else { 
+	     printf("Recorde: %d\n", Recorde);  }
+    } 
+    return 0;
+}
+
+//caso precise (atualização de recorde aintiga)
+/*int PlacarAtual = 0;
+int PlacarAnterior = 0;
+//int Record;
+if (PlacarAtual > PlacarAnterior)
 	 {
-		 //placar aumenta se a cobrinha pegar um coletável
-		 //mostrar o maior placar aqui
-			ST7789_WriteString(10, 199, "Pontos: ", PlacarAtual ,Font_16x26, WHITE, BLACK);
-		    //record = record;
+//placar aumenta se a cobrinha pegar um coletável
+//mostrar o maior placar aqui
+ST7789_WriteString(10, 199, "Pontos: ", PlacarAtual ,Font_16x26, WHITE, BLACK);
+//record = record;
 	 }
-	 else if (PlacarAtual == PlacarAnterior)
+else if (PlacarAtual == PlacarAnterior)
 	 {
-		 //placar continua o mesmo se a cobrinha pegar uma mesma quantidade de coletáveis
-		 //mostrar o placar anterior aqui
-		 ST7789_WriteString(10, 199, "Pontos: ", PlacarAtual ,Font_16x26, WHITE, BLACK);
+//placar continua o mesmo se a cobrinha pegar uma mesma quantidade de coletáveis
+//mostrar o placar anterior aqui
+ST7789_WriteString(10, 199, "Pontos: ", PlacarAtual ,Font_16x26, WHITE, BLACK);
 	 }
-	 else
+else
 	 {
-		 //se o placar for menor que o enterior ele mostra o placar anterior assim como no outro caso
-		 //só pra indicar mesmo
-		 ST7789_WriteString(10, 199, "Pontos: ", PlacarAtual ,Font_16x26, WHITE, BLACK);
+ //se o placar for menor que o enterior ele mostra o placar anterior assim como no outro caso
+//só pra indicar mesmo
+ST7789_WriteString(10, 199, "Pontos: ", PlacarAtual ,Font_16x26, WHITE, BLACK);
 	 }
-	  	  }
+	  	  }*/
+//direção da cobrinha (so if ur ready...)
+

@@ -65,5 +65,26 @@ ST7789_WriteString(10, 199, "Pontos: ", PlacarAtual ,Font_16x26, WHITE, BLACK);
 //direção da cobrinha (so if ur ready...)
 #define WIDTH 115
 #define HEIGHT 100
-
-if 
+    switch (direction) {
+        case 1:
+            y--;
+            break;
+        case 2:
+            y++;
+            break;
+        case 3:
+            x--;
+            break;
+        case 4:
+            x++;
+            break;
+    }
+    if (x >= WIDTH)
+        x = 0;
+    else if (x < 0)
+        x = WIDTH - 1;
+    if (y >= HEIGHT)
+        y = 0;
+    else if (y < 0)
+        y = HEIGHT - 1;
+}

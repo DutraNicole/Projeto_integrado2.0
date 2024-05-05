@@ -68,7 +68,7 @@ int direcao;
 
 #define WIDTH 115
 #define HEIGHT 100
-
+//aqui tem um void {
     switch (direcao) {
         case 1:
             y--;
@@ -91,4 +91,7 @@ int direcao;
         y = 0;
     else if (y < 0)
         y = HEIGHT - 1;
+
+// aqui pode acrescentar algo?
+
 }

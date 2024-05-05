@@ -63,9 +63,13 @@ ST7789_WriteString(10, 199, "Pontos: ", PlacarAtual ,Font_16x26, WHITE, BLACK);
 	 }
 	  	  }*/
 //direção da cobrinha (so if ur ready...)
+int x,y;
+int direcao;
+
 #define WIDTH 115
 #define HEIGHT 100
-    switch (direction) {
+
+    switch (direcao) {
         case 1:
             y--;
             break;

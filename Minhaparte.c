@@ -62,36 +62,39 @@ else
 ST7789_WriteString(10, 199, "Pontos: ", PlacarAtual ,Font_16x26, WHITE, BLACK);
 	 }
 	  	  }*/
+
 //direção da cobrinha (so if ur ready...)
+//int para os coiso de baixo ali, pra indicar 
 int x,y;
 int direcao;
-
+//defines para definir o tamanho do coiso da tela do coiso do coiso da coisa da cobrinha pra ela bater a cara e game ove e pá
 #define WIDTH 115
 #define HEIGHT 100
-//aqui tem um void {
+    //void blablabla{
     switch (direcao) {
-        case 1:
-            y--;
-            break;
-        case 2:
-            y++;
-            break;
-        case 3:
-            x--;
-            break;
-        case 4:
-            x++;
-            break;
-    }
-    if (x >= WIDTH)
-        x = 0;
-    else if (x < 0)
-        x = WIDTH - 1;
-    if (y >= HEIGHT)
-        y = 0;
-    else if (y < 0)
-        y = HEIGHT - 1;
-
-// aqui pode acrescentar algo?
-
+    case 1: //cobrinha vai pra cima
+    if (y > 0)
+        y--;
+    else
+        gameOver = true;
+    break;
+    case 2://cobrinha vai para baixo
+    if (y < HEIGHT - 1)
+        y++;
+    else
+        gameOver = true;
+    break;
+    case 3://cobrinha vai para esquerda
+    if (x > 0)
+        x--;
+    else
+        gameOver = true; 
+    break;
+    case 4: //cobrinha vai para direita
+    if (x < WIDTH - 1)
+        x++;
+    else
+        gameOver = true; 
+    break;
 }
+//}

@@ -1,4 +1,24 @@
   //Parte da Nicole
+//Atualizar placar 
+#include <stdio.h> 
+
+int main()
+{   
+    while(1){
+    printf("Digite um número para ser a coletável: ");
+    int coletável = 0;
+    int coletável1; 
+    
+    scanf("%d", &coletável);
+    
+    coletável1 += coletável;
+    printf("Pontos: %d\n", coletável1);
+}
+    return 0;
+}
+//modificar para o STM32
+
+//Atualizar recorde 
 	  			int PlacarAtual = 0;
 	  			int PlacarAnterior = 0;
 	  			//int Record;
